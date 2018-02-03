@@ -1,0 +1,101 @@
+\documentclass[12pt]{report}
+\usepackage[margin=1.10in]{geometry}
+\usepackage{amsmath}
+\usepackage{nccmath}
+\usepackage{alltt}
+\usepackage{sectsty}
+\usepackage{titlesec}
+\newcommand{\ts}{\textsuperscript}
+
+\titlespacing*{\section}{0pt}{0.8\baselineskip}{0.2\baselineskip}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        
+        \textbf{CO3093 COURSEWORK 1 Report}
+        
+        \vspace{0.5cm}
+		Big Data \& Predictive Analytics - Simulation-based \& Regression Models
+        
+        \vspace{1.5cm}
+        
+        \textbf{Ihtasham Chaudhry}
+        
+        \vfill
+        
+        \vspace{0.8cm}
+                
+        Department of Informatics\\
+        University of Leicester\\
+        23\ts{rd} February 2018
+        
+    \end{center}
+\end{titlepage}
+
+\newpage
+
+\section{Question 1}
+
+\vspace{0.5cm}
+
+\subsection{1.1}
+
+\vspace{0.5cm}
+
+It is important to consider missing values in our data set and to filter out the columns based on this information so that we have all the information we need to make predictions and have \emph{clean} data.
+
+\noindent
+We can then draw some conclusions from the data such as:
+\begin{enumerate}
+	\item Manchester City has the highest amount of wins (11) playing home compared to any other city. While West Brom has the lowest (2).
+	\item The average number of goals scored per match throughout the tournament by each team playing at home is 1.49 and away is 1.18.
+	\item The maximum number of goals scored in the tournament in one match was 7 goals and the maximum number of shots taken in one match was 35 shots. 
+\end{enumerate}
+
+\subsection{1.2}
+\noindent
+As we are only considering two teams; Manchester United and Manchester City, we can further filter the data and extract only the games played by both of those teams where they are playing either home or away. When we accumulate the data by teams and their home and away games to see how they perform for each category. After doing this we can draw some analysis from the data.
+
+\vspace{0.3cm}
+\noindent
+
+\iffalse
+\begin{table}[ht]
+\centering
+\caption{Full time results over the season (higher is better)}
+\begin{tabular}{lllll}
+         & Wins & Losses & Draws &  \\
+Man Utd  & 16 & 3 &  5 & \\
+Man City & 21 & 1 & 2 &\\
+
+\end{tabular}
+\end{table}
+\fi
+
+\begin{table}[ht]
+\centering
+\caption{Mean goals scored per game over the season (higher is better)}
+\begin{tabular}{lllll}
+         & Home & Away &  &  \\
+Man Utd  & 2.25 & 1.83 &  &  \\
+Man City & 3.50 & 2.33 &  &  \\
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Mean goals conceded per game over the season (lower is better)}
+\begin{tabular}{lllll}
+         & Home & Away &  &  \\
+Man Utd  & 0.41 & 0.91 &  &  \\
+Man City & 0.75 & 0.75 &  &  \\
+\end{tabular}
+\end{table}
+
+\noindent
+We can see that over 24 games played by both teams over the course of the season, Man City has a better win rate of 87.5\%, and a higher average of goals both in the home and away side compared to Man Utd. 
+
+\end{document}
