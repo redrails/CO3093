@@ -96,6 +96,12 @@ Man City & 0.75 & 0.75 &  &  \\
 \end{table}
 
 \noindent
-We can see that over 24 games played by both teams over the course of the season, Man City has a better win rate of 87.5\%, and a higher average of goals both in the home and away side compared to Man Utd. 
+We can see that over 24 games played by both teams over the course of the season, Man City has a higher average of goals both in the home and away side compared to Manchester United, and have conceded a higher average of goals home but a lesser average of goals home compared to Manchester United. 
+
+\newpage
+
+\subsection{1.3}
+\vspace{0.3cm}
+
 
 \end{document}
