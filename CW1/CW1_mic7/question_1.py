@@ -50,23 +50,31 @@ def mergeteamdata():
     return df
 
 """
+Renaming columns given a dict and a dataframe
+"""
+def renameCols(df, colsdict):
+    return df.reset_index().rename(columns=colsdict)
+
+"""
 Used to summarise the data, relevant to question 1.1
 """
 def summarisedata():
     print("Description:")
     print(data.describe())
 
-    print("\nNumber of wins at home")
-    print(data.groupby("HomeTeam")["FTR"].apply(lambda x: x[x == 'H'].count()))
+    groups = [0,0,0,0]
+    groups[0] = renameCols(data.groupby("HomeTeam")["FTR"].apply(lambda x: x[x == 'H'].count()), {"HomeTeam": "Team", "FTR": "Wins at home"})
+    groups[1] = renameCols(data.groupby("AwayTeam")["FTR"].apply(lambda x: x[x == 'A'].count()), {"AwayTeam": "Team", "FTR": "Wins away"})
+    groups[2] = renameCols(data.groupby("HomeTeam")["FTR"].apply(lambda x: x[x == 'A'].count()), {"HomeTeam": "Team", "FTR": "Losses at home"})
+    groups[3] = renameCols(data.groupby("AwayTeam")["FTR"].apply(lambda x: x[x == 'H'].count()), {"AwayTeam": "Team", "FTR": "Losses away"})
 
-    print("\nNumber of wins away")
-    print(data.groupby("AwayTeam")["FTR"].apply(lambda x: x[x == 'A'].count()))
+    merged = groups[0].merge(groups[1], on="Team").merge(groups[2], on="Team").merge(groups[3], on="Team")
 
-    print("\nNumber of losses at home")
-    print(data.groupby("HomeTeam")["FTR"].apply(lambda x: x[x == 'A'].count()))
+    print("Data on wins/losses")
+    print(merged)
 
-    print("\nNumber of losses away")
-    print(data.groupby("AwayTeam")["FTR"].apply(lambda x: x[x == 'H'].count()))
+    print("Averages of the wins/losses")
+    print(merged.describe())
 
 """
 Information about the data from the two teams relevant to question 1.2
@@ -110,8 +118,8 @@ def comparestats():
     plt.tight_layout()
     plt.show()
 
-#summarisedata()
-comparestats()
+summarisedata()
+#comparestats()
 # fig, ax = plt.subplots()
 # index = np.arange(2)
 # bar_width = 0.35

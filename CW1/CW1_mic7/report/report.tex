@@ -1,5 +1,5 @@
 \documentclass[12pt]{report}
-\usepackage[margin=1.10in]{geometry}
+\usepackage[margin=0.5in]{geometry}
 \usepackage{amsmath}
 \usepackage{nccmath}
 \usepackage{alltt}
@@ -45,14 +45,15 @@
 
 \vspace{0.5cm}
 
-It is important to consider missing values in our data set and to filter out the columns based on this information so that we have all the information we need to make predictions and have \emph{clean} data.
+It is important to consider missing values in our data set and to filter out the columns based on this information so that we have all the information we need to make predictions and have \emph{clean} data. In the case of our problem (predicting a winner), the most important factors that we must consider are win/loss statistics and goals scored/conceded statistics.
 
 \noindent
 We can then draw some conclusions from the data such as:
 \begin{enumerate}
-	\item Manchester City has the highest amount of wins (11) playing home compared to any other city. While West Brom has the lowest (2).
-	\item The average number of goals scored per match throughout the tournament by each team playing at home is 1.49 and away is 1.18.
-	\item The maximum number of goals scored in the tournament in one match was 7 goals and the maximum number of shots taken in one match was 35 shots. 
+	\item The average number of goals scored per match throughout the tournament by each team playing at home is 1.49 and away is 1.18. We also notice that the median of these values falls close to the minimum values which indicates that the data on this column is positively skewed and has a longer tail towards higher values.
+	\item From this data we can also observe that on average teams win more games playing home than they do playing away, The mean ($\mu$) of wins at home for each team is larger than the median of the dataset, this indicates that the distribution is skewed towards large values. The standard deviation ($\sigma$) is very small relative to the min and max values, this indicates that the distribution has "long tails". 
+	 \item Following from the previous point, the same observation can be made regarding the number of "FTHG" or "Fill Time Home Goals" by each team per match. The data again is skewed towards larger values. 
+	 
 \end{enumerate}
 
 \subsection{1.2}
