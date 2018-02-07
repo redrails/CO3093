@@ -6,6 +6,8 @@
 \usepackage{sectsty}
 \usepackage{titlesec}
 \newcommand{\ts}{\textsuperscript}
+\usepackage{graphicx}
+\graphicspath{ {../images/} }
 
 \titlespacing*{\section}{0pt}{0.8\baselineskip}{0.2\baselineskip}
 
@@ -50,10 +52,9 @@ It is important to consider missing values in our data set and to filter out the
 \noindent
 We can then draw some conclusions from the data such as:
 \begin{enumerate}
-	\item The average number of goals scored per match throughout the tournament by each team playing at home is 1.49 and away is 1.18.
+	\item The average number of goals scored per match throughout the tournament by each team playing at home is 1.49 and away is 1.18. We also notice that the median of these values falls close to the minimum values which indicates that the data on this column is positively skewed and has a longer tail towards higher values.
 	\item From this data we can also observe that on average teams win more games playing home than they do playing away, The mean ($\mu$) of wins at home for each team is larger than the median of the dataset, this indicates that the distribution is skewed towards large values. The standard deviation ($\sigma$) is very small relative to the min and max values, this indicates that the distribution has "long tails". 
-	 \item Following from the previous point, the same observation can be made regarding the number of "FTHG" or "Fill Time Home Goals" by each team per match. The data again is skewed towards larger values.
-	 \item  
+	 \item Following from the previous point, the same observation can be made regarding the number of "FTHG" or "Full Time Home Goals" by each team per match. The data again is skewed towards larger values. 
 	 
 \end{enumerate}
 
@@ -105,5 +106,6 @@ We can see that over 24 games played by both teams over the course of the season
 \subsection{1.3}
 \vspace{0.3cm}
 
+\includegraphics{universe}
 
 \end{document}

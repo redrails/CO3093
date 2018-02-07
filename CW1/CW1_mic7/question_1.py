@@ -2,6 +2,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 from scipy.stats import poisson, skellam
+import matplotlib.mlab as mlab
+
+
 """
 Args:
     dataframe: A dataframe of type pandas.DataFrame
@@ -55,19 +58,22 @@ Renaming columns given a dict and a dataframe
 def renameCols(df, colsdict):
     return df.reset_index().rename(columns=colsdict)
 
-"""
-Used to summarise the data, relevant to question 1.1
-"""
-def summarisedata():
-    print("Description:")
-    print(data.describe())
-
+def creategroups():
     groups = [0,0,0,0]
     groups[0] = renameCols(data.groupby("HomeTeam")["FTR"].apply(lambda x: x[x == 'H'].count()), {"HomeTeam": "Team", "FTR": "Wins at home"})
     groups[1] = renameCols(data.groupby("AwayTeam")["FTR"].apply(lambda x: x[x == 'A'].count()), {"AwayTeam": "Team", "FTR": "Wins away"})
     groups[2] = renameCols(data.groupby("HomeTeam")["FTR"].apply(lambda x: x[x == 'A'].count()), {"HomeTeam": "Team", "FTR": "Losses at home"})
     groups[3] = renameCols(data.groupby("AwayTeam")["FTR"].apply(lambda x: x[x == 'H'].count()), {"AwayTeam": "Team", "FTR": "Losses away"})
 
+    return groups
+
+"""
+Used to summarise the data, relevant to question 1.1
+"""
+def summarisedata():
+    print("Description:")
+    print(data.describe())
+    groups = creategroups()
     merged = groups[0].merge(groups[1], on="Team").merge(groups[2], on="Team").merge(groups[3], on="Team")
 
     print("Data on wins/losses")
@@ -118,7 +124,62 @@ def comparestats():
     plt.tight_layout()
     plt.show()
 
-summarisedata()
+
+def createdistributions():
+    mu_u = teams["ManUnitedHome"]["FTHG"].mean()
+    sigma_u = teams["ManUnitedHome"]["FTHG"].std()
+    x = np.linspace(mu_u - 4*sigma_u, mu_u+4*sigma_u, 100)
+    plt.plot(x, mlab.normpdf(x, mu_u, sigma_u), label="Man Utd Home")
+
+    mu_c = teams["ManCityHome"]["FTHG"].mean()
+    sigma_c = teams["ManCityHome"]["FTHG"].std()
+    x1 = np.linspace(mu_c - 4 * sigma_c, mu_c + 4 * sigma_c, 100)
+    plt.plot(x, mlab.normpdf(x, mu_c, sigma_c), label="Man City Home")
+
+    plt.xlabel("Goals per Match", size=13)
+    plt.ylabel("Proportion of Matches", size=13)
+    plt.legend()
+    plt.show()
+
+class PlotObject:
+    def __init__(self, df, col, glabel, xlabel, ylabel, plots):
+        self.df     = df
+        self.col    = col
+        self.glabel = glabel
+        self.xlabel = xlabel
+        self.ylabel = ylabel
+        self.plots  = plots
+
+def plotstats(stat):
+    fig = plt.figure(1)
+    fig.set_size_inches(12, 8)
+    for i in stat:
+        plt.subplot(i.plots[0])
+        i.df.boxplot(i.col, vert=False)
+        plt.subplot(i.plots[1])
+        temp = i.df[i.col].as_matrix()
+        plt.hist(temp, bins=30, alpha=0.7, label=i.glabel)
+        plt.xlabel(i.xlabel)
+        plt.ylabel(i.ylabel)
+        plt.legend()
+    plt.subplots_adjust(hspace=1)
+    plt.show()
+
+def histogram():
+    obj = []
+    obj.append(PlotObject(teams["ManUnitedHome"], "FTAG", "Man Utd Home", "Number of Matches", "Number of goals conceded", [421,423]))
+    obj.append(PlotObject(teams["ManCityAway"], "FTAG", "Man City Away", "Number of Matches", "Number of goals scored", [422,424]))
+
+    obj.append(PlotObject(teams["ManCityHome"], "FTAG", "Man City Home", "Number of Matches", "Number of goals conceded", [425, 427]))
+    obj.append(PlotObject(teams["ManUnitedAway"], "FTAG", "Man Utd Away", "Number of Matches", "Number of goals scored", [426, 428]))
+    plotstats(obj)
+
+#datainfo()
+createdistributions()
+histogram()
+
+#summarisedata()
+#createdistributions()
 #comparestats()
 # fig, ax = plt.subplots()
 # index = np.arange(2)
