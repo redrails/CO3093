@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.7)  7 FEB 2018 21:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.7)  22 FEB 2018 23:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -164,22 +164,53 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen126
 \Gin@req@width=\dimen127
 )
-(./report.aux)
+(/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen128
+\captionmargin@=\dimen129
+\captionwidth=\dimen130
+\caption@tempdima=\dimen131
+\caption@indent=\dimen132
+\caption@parindent=\dimen133
+\caption@hangindent=\dimen134
+)
+\c@ContinuedFloat=\count104
+)
+\c@KVtest=\count105
+\sf@farskip=\skip48
+\sf@captopadj=\dimen135
+\sf@capskip=\skip49
+\sf@nearskip=\skip50
+\c@subfigure=\count106
+\c@subfigure@save=\count107
+\c@lofdepth=\count108
+\c@subtable=\count109
+\c@subtable@save=\count110
+\c@lotdepth=\count111
+\sf@top=\skip51
+\sf@bottom=\skip52
+) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -216,16 +247,16 @@ LaTeX Font Info:    ... okay on input line 14.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count104
-\scratchdimen=\dimen128
+\scratchcounter=\count112
+\scratchdimen=\dimen136
 \scratchbox=\box29
-\nofMPsegments=\count105
-\nofMParguments=\count106
+\nofMPsegments=\count113
+\nofMParguments=\count114
 \everyMPshowfont=\toks22
-\MPscratchCnt=\count107
-\MPscratchDim=\dimen129
-\MPnumerator=\count108
-\makeMPintoPDFobject=\count109
+\MPscratchCnt=\count115
+\MPscratchDim=\dimen137
+\MPnumerator=\count116
+\makeMPintoPDFobject=\count117
 \everyMPtoPDFconversion=\toks23
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -271,6 +302,10 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1]
@@ -278,34 +313,52 @@ e
 File: ../images/fig1.png Graphic file (type png)
 
 <use ../images/fig1.png>
-Package pdftex.def Info: ../images/fig1.png used on input line 112.
+Package pdftex.def Info: ../images/fig1.png used on input line 114.
 (pdftex.def)             Requested size: 542.02501pt x 363.10449pt.
  [2 <../images/fig1.png>]
 <../images/fig2.png, id=20, 723.70375pt x 484.81125pt>
 File: ../images/fig2.png Graphic file (type png)
 
 <use ../images/fig2.png>
-Package pdftex.def Info: ../images/fig2.png used on input line 122.
+Package pdftex.def Info: ../images/fig2.png used on input line 124.
 (pdftex.def)             Requested size: 542.02501pt x 363.10449pt.
- [3 <../images/fig2.png>] (./report.aux) ) 
+ [3 <../images/fig2.png>] [4] [5
+
+]
+<../images/fig3.png, id=32, 1005.7575pt x 533.995pt>
+File: ../images/fig3.png Graphic file (type png)
+ <use ../images/fig3.png>
+Package pdftex.def Info: ../images/fig3.png used on input line 263.
+(pdftex.def)             Requested size: 487.8192pt x 258.9954pt.
+
+<../images/fig4.png, id=33, 998.73125pt x 529.98pt>
+File: ../images/fig4.png Graphic file (type png)
+ <use ../images/fig4.png>
+Package pdftex.def Info: ../images/fig4.png used on input line 265.
+(pdftex.def)             Requested size: 487.8192pt x 258.85951pt.
+
+[6 <../images/fig3.png> <../images/fig4.png>] [7] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 3076 strings out of 494910
- 41592 string characters out of 6179837
- 111661 words of memory out of 5000000
- 6333 multiletter control sequences out of 15000+600000
- 8915 words of font info for 32 fonts, out of 8000000 for 9000
+ 4300 strings out of 494910
+ 63447 string characters out of 6179837
+ 137513 words of memory out of 5000000
+ 7543 multiletter control sequences out of 15000+600000
+ 9536 words of font info for 34 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 37i,7n,32p,616b,231s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ti12.pfb>
-Output written on report.pdf (4 pages, 91941 bytes).
+ 44i,11n,49p,724b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmti12.pfb>
+Output written on report.pdf (8 pages, 208980 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
- 26 compressed objects within 1 object stream
+ 72 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
