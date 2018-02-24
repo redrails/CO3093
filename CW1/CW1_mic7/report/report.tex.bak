@@ -194,7 +194,12 @@ Here we can see that Manchester City has a much larger chance of winning the gam
 \noindent
 From this we can observe that Manchester City has a higher chance of winning both playing home or away compared to Manchester United. From this we can confidently predict that in a match up of Manchester United vs Manchester City in the Premier League, based on the historical data; Manchester City will win the game.
 
+\noindent\rule{2cm}{0.4pt}
+
 \vspace{0.3cm}
+\noindent
+\textbf{Verifying our model} 
+
 \noindent
 To test our simulation further, we can observe the scores for another team and try to predict what results we can obtain. For an example let us take Chelsea vs Arsenal as a candidate match-up. We can see that in the premier league, the following scores were observed between the two teams:
 
@@ -245,7 +250,7 @@ Arsenal & 7            & 1
 \end{table}
 
 \noindent
-Addition to this data, there was a total of 5 draws between the teams. Looking over the data in Table 5 we can verify that these are feasible predictions by our models. Thus we can conclude that our model may perform accurately on different tyupe  
+In addition to this data, there was a total of 5 draws between the teams. Looking over the data in Table 5 we can verify that these are feasible predictions by our model because Chelsea is winning more goals home than away and this is evident from Arsenal's home performance. Thus we can conclude that our model is very likely perform accurately when predicting a winner.  
 
 \newpage
 \section{Question 2}
