@@ -1,6 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import scipy.stats as stats
+import math
+import numpy as np
+import matplotlib.mlab as mlab
 
 
 data = pd.read_csv("diabetic_data.csv")
@@ -11,10 +14,10 @@ data = data.dropna()
 def filterCols(dataframe, cols):
 	return dataframe[cols]
 
-filtered = filterCols(data, ["race", "gender", "age", "time_in_hospital", "num_procedures"])
+filtered = filterCols(data, ["race", "gender", "age", "time_in_hospital", "num_procedures", "number_diagnoses"])
 
 print(filtered.describe())
-print("Skewness of time_in_hospital: ", stats.normaltest(filtered["time_in_hospital"]))
+print("Skewness of num_procedures: ", stats.normaltest(filtered["num_procedures"]))
 
 def createPieChart(dct, xlabel):
 	labels = list(dct.keys())
@@ -26,7 +29,6 @@ def createPieChart(dct, xlabel):
 	plt.xlabel(xlabel)
 	plt.show()
 
-
 race = filtered.race.value_counts()
 #createPieChart(race, "Diabetic patients by race")
 
@@ -37,7 +39,19 @@ del gender["Unknown/Invalid"]
 age = filtered.age.value_counts()
 #createPieChart(age, "Diabetic patients by age")
 
-tih = filtered.time_in_hospital.value_counts()
+
+tih = filtered.time_in_hospital.value_counts().to_frame().reset_index().sort_values(by="index")
 print(tih)
-tih.hist(grid=False, bins=20)
+tih.columns = ["days in hospital", "number of patients"]
+tih.plot(x='days in hospital', y='number of patients', kind='bar', legend=None, color=["C0"])
+plt.xlabel("Days spent in hospital")
+plt.ylabel("Number of patients")
+plt.show()
+
+nod = filtered.number_diagnoses.value_counts().to_frame().reset_index().sort_values(by="index")
+nod.columns = ["number diagnoses", "number of patients"]
+nod.plot(x='number diagnoses', y='number of patients', kind='bar', legend=None, color=["C0"])
+
+plt.xlabel("Number of Diagnoses")
+plt.ylabel("Number of patients")
 plt.show()

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.7)  14 MAR 2018 01:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.7)  15 MAR 2018 02:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -310,20 +310,20 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -392,7 +392,7 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring OFF on input line 17.
+Package hyperref Info: Link coloring OFF on input line 18.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -402,9 +402,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count128
 )
-LaTeX Info: Redefining \ref on input line 17.
-LaTeX Info: Redefining \pageref on input line 17.
-LaTeX Info: Redefining \nameref on input line 17.
+LaTeX Info: Redefining \ref on input line 18.
+LaTeX Info: Redefining \pageref on input line 18.
+LaTeX Info: Redefining \nameref on input line 18.
 
 (./report.out) (./report.out)
 \@outlinefile=\write3
@@ -413,65 +413,94 @@ LaTeX Info: Redefining \nameref on input line 17.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 61.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 62.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 61.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
 
-<../images/race_pie.png, id=20, 419.5675pt x 399.4925pt>
-File: ../images/race_pie.png Graphic file (type png)
+<../images/tih_hist.png, id=20, 578.16pt x 425.59pt>
+File: ../images/tih_hist.png Graphic file (type png)
 
-<use ../images/race_pie.png>
-Package pdftex.def Info: ../images/race_pie.png used on input line 70.
-(pdftex.def)             Requested size: 241.70607pt x 230.13919pt.
+<use ../images/tih_hist.png>
+Package pdftex.def Info: ../images/tih_hist.png used on input line 70.
+(pdftex.def)             Requested size: 241.70607pt x 177.92183pt.
 
-<../images/gender_pie.png, id=22, 420.57124pt x 376.40625pt>
-File: ../images/gender_pie.png Graphic file (type png)
+<../images/nod_bar.png, id=22, 579.16376pt x 428.60126pt>
+File: ../images/nod_bar.png Graphic file (type png)
 
-<use ../images/gender_pie.png>
-Package pdftex.def Info: ../images/gender_pie.png used on input line 76.
-(pdftex.def)             Requested size: 241.70607pt x 216.32277pt.
+<use ../images/nod_bar.png>
+Package pdftex.def Info: ../images/nod_bar.png used on input line 76.
+(pdftex.def)             Requested size: 241.70607pt x 178.8668pt.
 
 Overfull \hbox (2.43332pt too wide) in paragraph at lines 68--79
 [][]  [] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 84.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.84 \end{document}
-                    [1 <../images/race_pie.png> <../images/gender_pie.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 84.
+l.84 \clearpage
+                [1 <../images/tih_hist.png> <../images/nod_bar.png>]
+<../images/race_pie.png, id=34, 419.5675pt x 399.4925pt>
+File: ../images/race_pie.png Graphic file (type png)
 
-(./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 84.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 84.
+<use ../images/race_pie.png>
+Package pdftex.def Info: ../images/race_pie.png used on input line 91.
+(pdftex.def)             Requested size: 241.70607pt x 230.13919pt.
+
+<../images/gender_pie.png, id=35, 420.57124pt x 376.40625pt>
+File: ../images/gender_pie.png Graphic file (type png)
+
+<use ../images/gender_pie.png>
+Package pdftex.def Info: ../images/gender_pie.png used on input line 97.
+(pdftex.def)             Requested size: 241.70607pt x 216.32277pt.
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 89--100
+[][]  [] 
+ []
+
+[2
+
+ <../images/race_pie.png> <../images/gender_pie.png>]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 112.
+ [3
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 112.
+ (./report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 112.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 112.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 0DF9A45DEC40EB86221526AC5495B034;137.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 84.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 112.
  ) 
 Here is how much of TeX's memory you used:
- 7770 strings out of 494910
- 116329 string characters out of 6179837
- 210923 words of memory out of 5000000
- 10986 multiletter control sequences out of 15000+600000
- 8739 words of font info for 32 fonts, out of 8000000 for 9000
+ 7791 strings out of 494910
+ 116684 string characters out of 6179837
+ 211949 words of memory out of 5000000
+ 10999 multiletter control sequences out of 15000+600000
+ 9345 words of font info for 34 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 44i,7n,42p,431b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,7n,42p,799b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (2 pages, 112728 bytes).
+Output written on report.pdf (4 pages, 147026 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
- 40 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
- 27 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
+ 37 words of extra memory for PDF output out of 10000 (max. 10000000)
 
