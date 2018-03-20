@@ -121,6 +121,7 @@ In the dataset there is some confusion between the type of readmission, where va
 \end{figure}
 
 \clearpage
+\noindent
 From this we can see that \textit{about} half of the patients are readmitted to the hospital and in most cases the reason for the admission is Emergency. From this we can group the data and extract the following information:
 
 \begin{table}[!ht]
@@ -177,6 +178,25 @@ From this we can see that \textit{about} half of the patients are readmitted to 
 In Table 1 we can notice that a lot of the patients that are admitted are admitted for ``Emergency'', and some as ``Elective'' which means that the doctors reserve a bed for the patient to be admitted for any cause. We can also see that almost 50\% of patients who are admitted for ``Emergency'' are readmitted at some point. From this we can confidently assert that the type of admission may be very important in predicting whether a patient is likely to be readmitted at some point. The same assertion can be made about age, we can see that in regards to age-group, patients that are older are admitted more frequently and this increases the chance of them being readmitted at some point. However we can also notice that patients in the age group of \texttt{[20-30)} are very likely to be readmitted, as the dataset suggests. We can also say that older people are more likely to be diabetic, thus have a higher chance of being readmitted.
 
 
+% rfecv overfitting
+%Mean hits: 0.6155584670815591
+%Accuracy score: 0.6155584670815591
+%Cross validation mean scores: 0.6146064505640898
+%AUC = 0.6538034645695068
+
+
+% rfe, using 15 features, mix of num and cat
+% Mean hits: 0.6097936455944972
+% Accuracy score: 0.6097936455944972
+% Cross validation mean scores: 0.6102042059902929
+% AUC = 0.6441231619986825
+
+
+% rfe using 12 features, only categorical
+% Mean hits: 0.5645594498128372
+% Accuracy score: 0.5645594498128372
+% Cross validation mean scores: 0.5798723814459725
+% AUC = 0.584590174618275
 
   \begin{thebibliography}{1}
 
