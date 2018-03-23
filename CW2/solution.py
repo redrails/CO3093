@@ -26,8 +26,7 @@ def cleanData(df):
 	df.loc[df.readmitted != "NO", "readmitted"] = "YES"	# Convert all non-"NO" values to "YES" for readmitted
 
 	df = df.dropna(axis=1, thresh=(len(df)/4)*3)
-	df = df.dropna(axis=0, thresh=40)
-	
+	df = df.dropna(axis=0, thresh=40)	
 	return df
 
 def normalize(df):
@@ -49,19 +48,31 @@ def filterCols(dataframe, cols):
 	return dataframe[cols]
 
 data = cleanData(data)
-print(data.columns)
+print(data)
 
 
 def boxplot(df, plot_cols, by):
 	for col in plot_cols:
-		fig = plt.figure(figsize=(9, 6))
+		fig = plt.figure(figsize=(6, 5))
 		ax = fig.gca()
 		df.boxplot(column = col, by = by, ax = ax)
-		ax.set_title("Box plots of {} bg {}".format(col, by))
+		ax.set_title("Box plots of {} by {}".format(col, by))
+		plt.suptitle("")
 		ax.set_ylabel(col)
 		plt.show()
 
 boxplot(data, ["number_emergency", "num_medications", "num_procedures", "number_diagnoses"], "readmitted")
+
+xdata = data.copy()
+xdata["readmitted"] = xdata["readmitted"].map({"NO": 0, "YES": 1})
+xdata = xdata.select_dtypes(include=[np.number])
+
+xdata = xdata[(np.abs(stats.zscore(xdata)) < 4).all(axis=1)]
+
+print("outlier removed count: ", len(xdata))
+
+xdata = normalize(xdata)
+boxplot(xdata, ["number_emergency", "num_medications", "num_procedures", "number_diagnoses"], "readmitted")
 
 
 df_norm = normalize(data)
@@ -124,19 +135,19 @@ print(grp2)
 
 #createBar(filtered.number_diagnoses, ["number diagnoses", "number of patients"], 0, 1, "Number of Diagnoses", "Number of patients")
 
-# def pairs(plot_cols, df):
-# 	from pandas.tools.plotting import scatter_matrix
-# 	fig = plt.figure(1, figsize=(12, 12))
-# 	fig.clf()
-# 	ax = fig.gca()
-# 	scatter_matrix(df[plot_cols], alpha=0.3, diagonal='kde', ax = ax)
-# 	plt.show()
-# 	return('Done')
+def pairs(plot_cols, df):
+	from pandas.tools.plotting import scatter_matrix
+	fig = plt.figure(1, figsize=(12, 12))
+	fig.clf()
+	ax = fig.gca()
+	scatter_matrix(df[plot_cols], alpha=0.3, diagonal='kde', ax = ax)
+	plt.show()
+	return('Done')
 
 
 
-# plot_cols = ["time_in_hospital", "num_lab_procedures", "num_procedures", "num_medications", "number_diagnoses"]
-# pairs(plot_cols, data)
+#plot_cols = ["time_in_hospital", "num_lab_procedures", "num_procedures", "num_medications", "number_diagnoses"]
+#pairs(plot_cols, data)
 
 def plotclusters(df1, df2, xlabel, ylabel):
 	plt.plot(df1, df2,'ro')
@@ -156,7 +167,7 @@ _df = data.copy()
 
 _df["readmitted"] = _df["readmitted"].map({"NO": 0, "YES": 1})
 
-_df = normalize(_df)
+_df = _df[(np.abs(stats.zscore(_df.select_dtypes(exclude='object'))) < 3).all(axis=1)]
 
 clf = linear_model.LogisticRegression()
 f_cols = ['number_emergency', 'time_in_hospital', 'num_lab_procedures', 'num_procedures', 'num_medications', 'number_diagnoses', 'number_inpatient', 'number_outpatient']
@@ -178,12 +189,6 @@ print("Score against test data: {}".format(clf.score(X_test, Y_test)))
 cat_cols = ["age", "admission_type_id", "diabetesMed", "change", "insulin"]
 t_df = _df[f_cols+cat_cols]
 df_cat = pd.get_dummies(t_df, columns=cat_cols)
-
-#to_remove = ["encounter_id", "patient_nbr", "race", "gender", "admission_source_id", "discharge_disposition_id", "payer_code", "diag_1", "diag_2", "diag_3"]
-#to_keep = f_cols+["readmitted"]
-#cdf = _df[_df.columns.difference(to_remove)]
-#cdf = _df[to_keep]
-#df_cat = pd.get_dummies(cdf, columns=cdf.ix[:, cdf.columns != 'readmitted'].select_dtypes(include=[np.object]))
 
 model = linear_model.LogisticRegression()
 X0 = df_cat.ix[:, df_cat.columns != 'readmitted']
@@ -244,5 +249,5 @@ print (df_norm.groupby('clust').mean())
 pca_data = PCA(n_components=6).fit(df_norm)
 pca_2d = pca_data.transform(df_norm)
 plt.scatter(pca_2d[:,0], pca_2d[:,1], c=labels)
-plt.title('Wine clusters')
+plt.title('Readamission clusters')
 plt.show()
