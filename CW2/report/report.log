@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.7)  23 MAR 2018 11:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.7)  23 MAR 2018 18:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -465,151 +465,146 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 97--108
 [][]  [] 
  []
 
-<../images/combined_matrix.png, id=48, 867.24pt x 516.0078pt>pdfTeX warning (ex
-t4): destination with the same identifier (name{page.1}) has been already used,
- duplicate ignored
+<../images/combined_matrix.png, id=48, 1003.75pt x 614.295pt>
+File: ../images/combined_matrix.png Graphic file (type png)
+
+<use ../images/combined_matrix.png>
+Package pdftex.def Info: ../images/combined_matrix.png used on input line 119.
+(pdftex.def)             Requested size: 500.484pt x 306.30313pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.116 ...s[width=1\textwidth]{combined_matrix.png}
-                                                   [1 <../images/tih_hist.png> 
-<../images/nod_bar.png>]
-File: ../images/combined_matrix.png Graphic file (type png)
- <use ../images/combined_matrix.png>
-Package pdftex.def Info: ../images/combined_matrix.png used on input line 116.
-(pdftex.def)             Requested size: 500.484pt x 297.78873pt.
-
-Overfull \hbox (17.0pt too wide) in paragraph at lines 116--117
-[][] 
- []
-
+l.121 \end{figure}
+                   [1 <../images/tih_hist.png> <../images/nod_bar.png>]
 <../images/race_pie.png, id=59, 419.5675pt x 399.4925pt>
 File: ../images/race_pie.png Graphic file (type png)
 
 <use ../images/race_pie.png>
-Package pdftex.def Info: ../images/race_pie.png used on input line 127.
-(pdftex.def)             Requested size: 200.19054pt x 190.60822pt.
+Package pdftex.def Info: ../images/race_pie.png used on input line 132.
+(pdftex.def)             Requested size: 160.15303pt x 152.49144pt.
 
 <../images/gender_pie.png, id=60, 420.57124pt x 376.40625pt>
 File: ../images/gender_pie.png Graphic file (type png)
 
 <use ../images/gender_pie.png>
-Package pdftex.def Info: ../images/gender_pie.png used on input line 133.
-(pdftex.def)             Requested size: 200.19054pt x 179.16814pt.
+Package pdftex.def Info: ../images/gender_pie.png used on input line 138.
+(pdftex.def)             Requested size: 160.15303pt x 143.33452pt.
  [2 <../images/combined_matrix.png> <../images/race_pie.png> <../images/gender_
 pie.png>]
-<../images/readmitted_pie.png, id=69, 419.5675pt x 378.41376pt>
+<../images/readmitted_pie.png, id=70, 419.5675pt x 378.41376pt>
 File: ../images/readmitted_pie.png Graphic file (type png)
 
 <use ../images/readmitted_pie.png>
-Package pdftex.def Info: ../images/readmitted_pie.png used on input line 149.
+Package pdftex.def Info: ../images/readmitted_pie.png used on input line 154.
 (pdftex.def)             Requested size: 200.19054pt x 180.551pt.
 
-<../images/admission_type_pie.png, id=70, 451.6875pt x 411.5375pt>
+<../images/admission_type_pie.png, id=71, 451.6875pt x 411.5375pt>
 File: ../images/admission_type_pie.png Graphic file (type png)
 
 <use ../images/admission_type_pie.png>
-Package pdftex.def Info: ../images/admission_type_pie.png used on input line 15
-5.
+Package pdftex.def Info: ../images/admission_type_pie.png used on input line 16
+0.
 (pdftex.def)             Requested size: 200.19054pt x 182.39577pt.
  [3 <../images/readmitted_pie.png> <../images/admission_type_pie.png>]
-<../images/bplot_emergency.png, id=79, 433.62pt x 361.35pt>
+<../images/bplot_emergency.png, id=80, 540.0175pt x 446.66875pt>
 File: ../images/bplot_emergency.png Graphic file (type png)
 
 <use ../images/bplot_emergency.png>
-Package pdftex.def Info: ../images/bplot_emergency.png used on input line 186.
-(pdftex.def)             Requested size: 200.19054pt x 166.82402pt.
+Package pdftex.def Info: ../images/bplot_emergency.png used on input line 191.
+(pdftex.def)             Requested size: 225.21626pt x 186.28418pt.
 
-<../images/bplot_meds.png, id=80, 433.62pt x 361.35pt>
+<../images/bplot_meds.png, id=81, 539.01375pt x 447.6725pt>
 File: ../images/bplot_meds.png Graphic file (type png)
 
 <use ../images/bplot_meds.png>
-Package pdftex.def Info: ../images/bplot_meds.png used on input line 187.
-(pdftex.def)             Requested size: 200.19054pt x 166.82402pt.
+Package pdftex.def Info: ../images/bplot_meds.png used on input line 192.
+(pdftex.def)             Requested size: 225.21626pt x 187.05118pt.
 
-<../images/bplot_proc.png, id=81, 433.62pt x 361.35pt>
+<../images/bplot_proc.png, id=82, 528.97626pt x 448.67625pt>
 File: ../images/bplot_proc.png Graphic file (type png)
 
 <use ../images/bplot_proc.png>
-Package pdftex.def Info: ../images/bplot_proc.png used on input line 188.
-(pdftex.def)             Requested size: 200.19054pt x 166.82402pt.
+Package pdftex.def Info: ../images/bplot_proc.png used on input line 193.
+(pdftex.def)             Requested size: 225.21626pt x 191.02377pt.
 
-<../images/bplot_diag.png, id=82, 433.62pt x 361.35pt>
+<../images/bplot_diag.png, id=83, 540.0175pt x 449.68pt>
 File: ../images/bplot_diag.png Graphic file (type png)
 
 <use ../images/bplot_diag.png>
-Package pdftex.def Info: ../images/bplot_diag.png used on input line 189.
-(pdftex.def)             Requested size: 200.19054pt x 166.82402pt.
+Package pdftex.def Info: ../images/bplot_diag.png used on input line 194.
+(pdftex.def)             Requested size: 225.21626pt x 187.54002pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--192
+Underfull \hbox (badness 10000) in paragraph at lines 189--197
 
  []
 
 [4 <../images/bplot_emergency.png> <../images/bplot_meds.png> <../images/bplot_
 proc.png> <../images/bplot_diag.png>]
-<../images/bplot_out_emergency.png, id=96, 433.62pt x 361.35pt>
+<../images/bplot_out_emergency.png, id=94, 541.02126pt x 447.6725pt>
 File: ../images/bplot_out_emergency.png Graphic file (type png)
 
 <use ../images/bplot_out_emergency.png>
 Package pdftex.def Info: ../images/bplot_out_emergency.png used on input line 2
-09.
-(pdftex.def)             Requested size: 200.19054pt x 166.82402pt.
+12.
+(pdftex.def)             Requested size: 225.21626pt x 186.35442pt.
 
-<../images/bplot_out_meds.png, id=97, 433.62pt x 361.35pt>
+<../images/bplot_out_meds.png, id=95, 544.0325pt x 448.67625pt>
 File: ../images/bplot_out_meds.png Graphic file (type png)
 
 <use ../images/bplot_out_meds.png>
-Package pdftex.def Info: ../images/bplot_out_meds.png used on input line 210.
-(pdftex.def)             Requested size: 200.19054pt x 166.82402pt.
+Package pdftex.def Info: ../images/bplot_out_meds.png used on input line 213.
+(pdftex.def)             Requested size: 225.21626pt x 185.74532pt.
 
-<../images/bplot_out_proc.png, id=98, 433.62pt x 361.35pt>
+<../images/bplot_out_proc.png, id=96, 541.02126pt x 446.66875pt>
 File: ../images/bplot_out_proc.png Graphic file (type png)
 
 <use ../images/bplot_out_proc.png>
-Package pdftex.def Info: ../images/bplot_out_proc.png used on input line 211.
-(pdftex.def)             Requested size: 200.19054pt x 166.82402pt.
+Package pdftex.def Info: ../images/bplot_out_proc.png used on input line 214.
+(pdftex.def)             Requested size: 225.21626pt x 185.93658pt.
 
-<../images/bplot_out_diag.png, id=99, 433.62pt x 361.35pt>
+<../images/bplot_out_diag.png, id=97, 543.02875pt x 451.6875pt>
 File: ../images/bplot_out_diag.png Graphic file (type png)
 
 <use ../images/bplot_out_diag.png>
-Package pdftex.def Info: ../images/bplot_out_diag.png used on input line 212.
-(pdftex.def)             Requested size: 200.19054pt x 166.82402pt.
+Package pdftex.def Info: ../images/bplot_out_diag.png used on input line 215.
+(pdftex.def)             Requested size: 225.21626pt x 187.33653pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--215
+Underfull \hbox (badness 10000) in paragraph at lines 210--218
 
  []
 
 [5 <../images/bplot_out_emergency.png> <../images/bplot_out_meds.png> <../image
 s/bplot_out_proc.png> <../images/bplot_out_diag.png>]
-<../images/emergency_clust.png, id=109, 462.528pt x 346.896pt>
+<../images/emergency_clust.png, id=110, 462.528pt x 346.896pt>
 File: ../images/emergency_clust.png Graphic file (type png)
 
 <use ../images/emergency_clust.png>
-Package pdftex.def Info: ../images/emergency_clust.png used on input line 249.
+Package pdftex.def Info: ../images/emergency_clust.png used on input line 252.
 (pdftex.def)             Requested size: 200.19054pt x 150.1416pt.
 
-<../images/meds_clust.png, id=110, 462.528pt x 346.896pt>
+<../images/meds_clust.png, id=111, 462.528pt x 346.896pt>
 File: ../images/meds_clust.png Graphic file (type png)
 
 <use ../images/meds_clust.png>
-Package pdftex.def Info: ../images/meds_clust.png used on input line 250.
+Package pdftex.def Info: ../images/meds_clust.png used on input line 253.
 (pdftex.def)             Requested size: 200.19054pt x 150.1416pt.
 
-<../images/proc_clust.png, id=111, 462.528pt x 346.896pt>
+<../images/proc_clust.png, id=112, 462.528pt x 346.896pt>
 File: ../images/proc_clust.png Graphic file (type png)
 
 <use ../images/proc_clust.png>
-Package pdftex.def Info: ../images/proc_clust.png used on input line 251.
+Package pdftex.def Info: ../images/proc_clust.png used on input line 254.
 (pdftex.def)             Requested size: 200.19054pt x 150.1416pt.
 
-<../images/inpatient_clust.png, id=112, 462.528pt x 346.896pt>
+<../images/inpatient_clust.png, id=113, 462.528pt x 346.896pt>
 File: ../images/inpatient_clust.png Graphic file (type png)
 
 <use ../images/inpatient_clust.png>
-Package pdftex.def Info: ../images/inpatient_clust.png used on input line 252.
+Package pdftex.def Info: ../images/inpatient_clust.png used on input line 255.
 (pdftex.def)             Requested size: 200.19054pt x 150.1416pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--255
+Underfull \hbox (badness 10000) in paragraph at lines 250--258
 
  []
 
@@ -617,48 +612,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 247--255
 
  <../images/emergency_clust.png> <../images/meds_clust.png> <../images/proc_clu
 st.png> <../images/inpatient_clust.png>]
-<../images/clust_hist.png, id=124, 462.528pt x 346.896pt>
+<../images/clust_hist.png, id=125, 462.528pt x 346.896pt>
 File: ../images/clust_hist.png Graphic file (type png)
 
 <use ../images/clust_hist.png>
-Package pdftex.def Info: ../images/clust_hist.png used on input line 312.
+Package pdftex.def Info: ../images/clust_hist.png used on input line 315.
 (pdftex.def)             Requested size: 250.24199pt x 187.68098pt.
 
-<../images/clust_scatter.png, id=125, 462.528pt x 346.896pt>
+<../images/clust_scatter.png, id=126, 462.528pt x 346.896pt>
 File: ../images/clust_scatter.png Graphic file (type png)
 
 <use ../images/clust_scatter.png>
-Package pdftex.def Info: ../images/clust_scatter.png used on input line 318.
+Package pdftex.def Info: ../images/clust_scatter.png used on input line 321.
 (pdftex.def)             Requested size: 250.24199pt x 187.68098pt.
 
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 310--321
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 313--324
 [][]  [] 
  []
 
 [7 <../images/clust_hist.png> <../images/clust_scatter.png>] [8]
-<../images/roc_curve.png, id=163, 462.528pt x 346.896pt>
+<../images/roc_curve.png, id=164, 462.528pt x 346.896pt>
 File: ../images/roc_curve.png Graphic file (type png)
 
 <use ../images/roc_curve.png>
-Package pdftex.def Info: ../images/roc_curve.png used on input line 376.
+Package pdftex.def Info: ../images/roc_curve.png used on input line 379.
 (pdftex.def)             Requested size: 250.24199pt x 187.68098pt.
 
-<../images/roc_mixofnumcat.png, id=164, 462.528pt x 346.896pt>
+<../images/roc_mixofnumcat.png, id=165, 462.528pt x 346.896pt>
 File: ../images/roc_mixofnumcat.png Graphic file (type png)
 
 <use ../images/roc_mixofnumcat.png>
-Package pdftex.def Info: ../images/roc_mixofnumcat.png used on input line 382.
+Package pdftex.def Info: ../images/roc_mixofnumcat.png used on input line 385.
 (pdftex.def)             Requested size: 250.24199pt x 187.68098pt.
 
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 374--385
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 377--388
 [][]  [] 
  []
 
-<../images/rfecvroc.png, id=165, 462.528pt x 346.896pt>
+<../images/rfecvroc.png, id=166, 462.528pt x 346.896pt>
 File: ../images/rfecvroc.png Graphic file (type png)
 
 <use ../images/rfecvroc.png>
-Package pdftex.def Info: ../images/rfecvroc.png used on input line 402.
+Package pdftex.def Info: ../images/rfecvroc.png used on input line 405.
 (pdftex.def)             Requested size: 250.24199pt x 187.68098pt.
  [9 <../images/roc_curve.png> <../images/roc_mixofnumcat.png> <../images/rfecvr
 oc.png>]
@@ -668,19 +663,19 @@ Missing character: There is no œ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no  in font cmr10!
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 437.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 440.
  [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 437.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 440.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 437.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 437.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 440.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 440.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 5424459DACFDA0CDB3358728B22BBA86;455.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 437.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 440.
  ) 
 Here is how much of TeX's memory you used:
- 9379 strings out of 494910
- 140633 string characters out of 6179837
+ 9380 strings out of 494910
+ 140650 string characters out of 6179837
  250410 words of memory out of 5000000
  12491 multiletter control sequences out of 15000+600000
  9253 words of font info for 34 fonts, out of 8000000 for 9000
@@ -698,10 +693,10 @@ msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.p
 fb>
-Output written on report.pdf (11 pages, 1049267 bytes).
+Output written on report.pdf (11 pages, 923248 bytes).
 PDF statistics:
- 243 PDF objects out of 1000 (max. 8388607)
- 168 compressed objects within 2 object streams
- 60 named destinations out of 1000 (max. 500000)
+ 245 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
+ 61 named destinations out of 1000 (max. 500000)
  185 words of extra memory for PDF output out of 10000 (max. 10000000)
 

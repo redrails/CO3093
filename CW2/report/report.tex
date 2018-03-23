@@ -113,10 +113,15 @@ From Figure 1 we can observe that most patients stay in the hospital between 1 a
 \linespace
 A scatter plot matrix enables us to visualize correlations between well-specified columns. This is useful to see how the different columns are related to each other in the data we have. 
 
+
+\begin{figure}[h!]
+  \centering
 \includegraphics[width=1\textwidth]{combined_matrix.png}
+  \caption{Scatter plot matrix showing correlations between numeric columns}
+\end{figure}
 
 \linespace
-We do not see much correlation between our selected columns in the matrix, this could be due to the scaling of the different variables which is more than likely. For example a patient might take 5 medications but has 1 diagnosis. We can analyse the data further and make evaluations to help us as the matrix is not very useful in this case. 
+We do not see much correlation between our selected columns in the matrix, this could be due to the scaling of the different variables which is more than likely. For example a patient might take 5 medications but has 1 diagnosis, on the other hand another patient might take 5 medications but has 9 diagnoses. We can analyse the data further and make evaluations to help us as the matrix is not very useful in this case. 
 
 \linespace
 At a basic level we can visualise the proportion of diabetic patients by race and gender, the results of this can be seen below.
@@ -124,13 +129,13 @@ At a basic level we can visualise the proportion of diabetic patients by race an
 \begin{figure}[ht]
 	\begin{minipage}[b]{.4\textwidth}
 	\centering
-	\includegraphics[width=1\textwidth]{race_pie.png}
+	\includegraphics[width=0.8\textwidth]{race_pie.png}
 	\caption{Proportion of patients by race}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[b]{.4\textwidth}
 	\centering
-	\includegraphics[width=1\textwidth]{gender_pie.png}
+	\includegraphics[width=0.8\textwidth]{gender_pie.png}
 \caption{Proportion of patients by gender}
 \end{minipage}
 \end{figure}
@@ -183,15 +188,14 @@ After analysing these variables in our data-set we observe the following results
 \begin{figure}[!h]
    \begin{minipage}{\textwidth}
      \centering
-     \includegraphics[width=.4\textwidth]{bplot_emergency.png}\quad
-     \includegraphics[width=.4\textwidth]{bplot_meds.png}\\
-     \includegraphics[width=.4\textwidth]{bplot_proc.png}\quad
-     \includegraphics[width=.4\textwidth]{bplot_diag.png}
+     \includegraphics[width=.45\textwidth]{bplot_emergency.png}\quad
+     \includegraphics[width=.45\textwidth]{bplot_meds.png}\\
+     \includegraphics[width=.45\textwidth]{bplot_proc.png}\quad
+     \includegraphics[width=.45\textwidth]{bplot_diag.png}
      \caption{Box plots of the above observations}
    \end{minipage}\\[1em]
   
 \end{figure}
-
 \noindent
 From Figure 7 we notice that there are many \textit{suspected} outliers in our variables. For instance, observing the \texttt{num\_medications} variable we can see that there are many outlying values after the tails, similarly we can notice this for \texttt{number\_emergency}. To make an improvement to this we can \textbf{remove the outlying values} from our data-set using a $z\mathrm{-score}$ measure. To do this we can use the following equation: 
 
@@ -199,27 +203,26 @@ From Figure 7 we notice that there are many \textit{suspected} outliers in our v
 z_{i} =  \frac{ x_{i}  -  \overline{x}}{S} 	
 \end{myeq}
 
-\newpage
 \noindent
 In python this is much simpler by using \texttt{scipy.stats.zscore} which is able to calculate the $z\mathrm{-score}$ values for a given DataFrame. After applying this method to our data-set we can observe the following box-plots.
 
 \begin{figure}[!ht]
    \begin{minipage}{\textwidth}
      \centering
-     \includegraphics[width=.4\textwidth]{bplot_out_emergency.png}\quad
-     \includegraphics[width=.4\textwidth]{bplot_out_meds.png}\\
-     \includegraphics[width=.4\textwidth]{bplot_out_proc.png}\quad
-     \includegraphics[width=.4\textwidth]{bplot_out_diag.png}
+     \includegraphics[width=.45\textwidth]{bplot_out_emergency.png}\quad
+     \includegraphics[width=.45\textwidth]{bplot_out_meds.png}\\
+     \includegraphics[width=.45\textwidth]{bplot_out_proc.png}\quad
+     \includegraphics[width=.45\textwidth]{bplot_out_diag.png}
      \caption{Box plots of the above observations removing outliers}
    \end{minipage}\\[1em]
   
 \end{figure}
 
 \noindent
-From Figure 8 we can observe that specifically for \texttt{number\_emergency} and \texttt{num\_medications} we have made a vast improvement in removing most of the outliers. It is important that we make these observations as it contributes heavily to the predictive model that we are aiming to create. Furthermore, we have normalised this data-set so now we can perform clustering to get more insight into the data-set.
+From Figure 8 we can observe that specifically for \texttt{number\_emergency} and \texttt{num\_medications} we have made a vast improvement in removing most of the outliers. It is important that we make these observations as it contributes heavily to the predictive model that we are aiming to create because it eliminates biased examples. Furthermore, we have normalised this data-set so now we can perform clustering to get more insight into the data-set.
 
 \linespace
-It is rather important to clarify that removing outliers in the data could be dangerous because we are removing information which will be used to make predictions. For instance, we might think that a value is outlying, however when we visualise the data we might find that the outliers in fact help is make conclusions about the data such as trends, or statistical analysis such as analysing quartiles or standard deviations. In the context of this study it is even more important that we are careful with the information as we are working in a medical context which is a very sensitive area in the real world, so if this approach of removing outliers was to be used in practice, it may be more harmful. 
+It is rather important to clarify that removing outliers in the data \textit{could} be dangerous because we are removing information which will be used to make predictions. For instance, we might think that a value is outlying, however when we visualise the data we might find that the outliers in fact help us make conclusions about the data such as trends, or statistical analysis such as analysing quartiles or standard deviations. In the context of this study it is even more important that we are careful with the information as we are working in a medical context which is a very sensitive area in the real world, so if this approach of removing outliers was to be used in practice, it may be more harmful. 
 
 \clearpage
 \section{Clustering}
@@ -228,7 +231,7 @@ It is rather important to clarify that removing outliers in the data could be da
 Before we can begin making predictions on our data-set it is important that we perform clustering, this will indicate what variables in our data-set can be observed and the impact it will have on making predictions. To do this we will use K-Means clustering.
 
 \linespace
-It is important to understand that evaluating the quality of our clusters is very difficult but we should be able to form clusters that make sense in the context of our data-set. 
+It should be noted that evaluating the quality of our clusters is very difficult but we should be able to form clusters that make sense in the context of our data-set. 
 
 \subsection{K-Means Clustering}
 K-Means is a type of unsupervised learning approach in which our aim is to find groups of data and their correlation to get a better insight into the information we have. 
@@ -258,7 +261,7 @@ The standard K-Means algorithm isn't directly applicable to categorical data, fo
 From the above we can see that \texttt{Emergency vs Readmitted} has a very interesting distribution and the scatter plot shows values that might be worth considering for our predictive model. The same can be observed for \texttt{Inpatient}.
 
 \linespace
-We can group the data on the texttt{admission\_type\_id} column to give us an indication of the proportionality of the readmission values, and furthermore we can also consider age and group our data on the \texttt{age} column. 
+We can group the data on the \texttt{admission\_type\_id} column to give us an indication of the proportionality of the readmission values, and furthermore we can also consider age and group our data on the \texttt{age} column. 
 
 \begin{table}[!ht]
     %\caption{}
@@ -301,7 +304,7 @@ We can group the data on the texttt{admission\_type\_id} column to give us an in
 \end{table}
 
 \noindent
-In Table 1 we can notice that a lot of the patients that are admitted are admitted for ``Emergency'', and some as ``Elective''. We can also see that almost 50\% of patients who are admitted for ``Emergency'' are readmitted at some point. From this we can confidently assert that the type of admission may be very important in predicting whether a patient is likely to be readmitted at some point. The same assertion can be made about age, we can see that in regards to age-group, patients that are older are admitted more frequently and this increases the chance of them being readmitted at some point.
+In Table 1 we can notice that a lot of the patients are admitted for ``Emergency'', and some as ``Elective''. We can also see that almost 50\% of patients who are admitted for ``Emergency'' are readmitted at some point. From this we can confidently assert that the type of admission may be very important in predicting whether a patient is likely to be readmitted at some point. The same assertion can be made about age, we can see that in regards to age-group, patients that are older are admitted more frequently and this increases the chance of them being readmitted at some point.
 
 \linespace
 We can further visualise our clusters using a histogram to see what clusters we can use in grouping the data and what will help us decide the variables to pick in making predictions later on.
@@ -320,7 +323,7 @@ We can further visualise our clusters using a histogram to see what clusters we 
 \end{minipage}
 \end{figure}
 \noindent
-From Figure 10, we can see that we have 4 clusters with good frequencies, showing that there is some groups that might be worth analysing. In the histogram we are looking for a \textit{uniform} distribution but we will still gain information with the results we have obtained. Furthermore from Figure 11 we can visualise the clusters and see the relationship of the clusters, we can see that the distribution of these clusters is fairly similar to the histograms we produced.
+From Figure 11, we can see that we have 4 clusters with \textit{good} frequencies, showing that there is some groups that might be worth analysing. In the histogram we are looking for a \textit{uniform} distribution but we will still gain information with the results we have obtained. Furthermore from Figure 12 we can visualise the clusters and see the relationship of the clusters, we can see that the distribution of these clusters is fairly similar to the histograms we produced.
 
 
 \newpage
@@ -408,7 +411,7 @@ While this looks to be an optimistic result, we do not know what features our pr
 \newpage
 
 \section{Equation}
-The final equation that we are able to obtain from are model is as follows:
+The final equation that we are able to obtain from our predictive model is as follows:
 
 
 \begin{equation*}
@@ -423,10 +426,10 @@ Where the variables in the equation are obtained form the previous coefficients 
 From this we can see that \texttt{ni} or \texttt{number\_inpatient} has the most effect on our prediction, i.e. a change in units will mostly be impacted by this variable. This is an important observation to make in order to understand what affects the prediction the most. We would therefore expect that a higher \texttt{ni} value will heavily affect the prediction. 
 
 \section{Conclusion}
-In this study we have looked at the data-set \texttt{Diabetes 130-US hospitals for years 1999-2008} and we have made analysis, visualisations, clustering and predictions. In essence we have been able to achieve a score of \texttt{0.65} for the area under our ROC curve and a cross-validation mean score of 0.61. While this does not look to be great, it is important to note that the score we have been able to obtain heavily relies on the data-set and missing values. There are many missing values in the data-set and in the case that we had more information it may be safe to assert that it would help in making predictions.
+In this study we have looked at the data-set \texttt{Diabetes 130-US hospitals for years 1999-2008} and we have made analyses, visualisations, clustering and predictions. In essence we have been able to achieve a score of \texttt{0.65} for the area under our ROC curve and a cross-validation mean score of 0.61. While this does not look to be great, it is important to note that the score we have been able to obtain heavily relies on the data-set and missing values. There are many missing values in the data-set and in the case that we had more information it may be safe to assert that it would help in making predictions.
 
 \linespace
-It is important to reiterate that this model will most likely not be fit to use for making real world predictions but may be used as a guidance to test different features to find correlations and relationships which may give us more insight into diabetes. 
+It is important to reiterate that this model will most likely not be fit to use for making real world predictions but may be used as a guidance to test different features to find correlations and relationships which may give us more insight into diabetes using a linear modelling approach.
 
   \begin{thebibliography}{1}
 
