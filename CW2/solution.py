@@ -10,6 +10,7 @@ from sklearn import feature_selection, metrics
 from sklearn.cluster import KMeans
 from sklearn import datasets 
 from sklearn.decomposition import PCA
+import seaborn
 
 data = pd.read_csv("diabetic_data.csv") # Firstly read the data-set csv
 
