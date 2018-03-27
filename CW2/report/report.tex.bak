@@ -304,7 +304,7 @@ We can group the data on the \texttt{admission\_type\_id} column to give us an i
 \end{table}
 
 \noindent
-In Table 1 we can notice that a lot of the patients that are admitted are admitted for ``Emergency'', and some as ``Elective''. We can also see that almost 50\% of patients who are admitted for ``Emergency'' are readmitted at some point. From this we can confidently assert that the type of admission may be very important in predicting whether a patient is likely to be readmitted at some point. The same assertion can be made about age, we can see that in regards to age-group, patients that are older are admitted more frequently and this increases the chance of them being readmitted at some point.
+In Table 1 we can notice that a lot of the patients are admitted for ``Emergency'', and some as ``Elective''. We can also see that almost 50\% of patients who are admitted for ``Emergency'' are readmitted at some point. From this we can confidently assert that the type of admission may be very important in predicting whether a patient is likely to be readmitted at some point. The same assertion can be made about age, we can see that in regards to age-group, patients that are older are admitted more frequently and this increases the chance of them being readmitted at some point.
 
 \linespace
 We can further visualise our clusters using a histogram to see what clusters we can use in grouping the data and what will help us decide the variables to pick in making predictions later on.
@@ -323,13 +323,13 @@ We can further visualise our clusters using a histogram to see what clusters we 
 \end{minipage}
 \end{figure}
 \noindent
-From Figure 10, we can see that we have 4 clusters with good frequencies, showing that there is some groups that might be worth analysing. In the histogram we are looking for a \textit{uniform} distribution but we will still gain information with the results we have obtained. Furthermore from Figure 11 we can visualise the clusters and see the relationship of the clusters, we can see that the distribution of these clusters is fairly similar to the histograms we produced.
+From Figure 11, we can see that we have 4 clusters with \textit{good} frequencies, showing that there is some groups that might be worth analysing. In the histogram we are looking for a \textit{uniform} distribution but we will still gain information with the results we have obtained. Furthermore from Figure 12 we can visualise the clusters and see the relationship of the clusters, we can see that the distribution of these clusters is fairly similar to the histograms we produced.
 
 
 \newpage
 \section{Predictive Model}
 \noindent
-Now that we have enough information as to what columns we should use to make predictions, we can start to create a predictive model and measure the accuracy of how well it will perform. Firstly we can try to create a \texttt{LogisticRegression} model on the numerical data that we have observed and see how it performs, this will also give us the coefficients we need to be able to make a prediction.
+Now that we have enough information as to what columns we should use to make predictions, we can start to create a predictive model and measure the accuracy of how well it will perform. Firstly we can try to create a \texttt{LogisticRegression} model on the numerical data that we have observed and see how it performs, this will also give us the coefficients we need to be able to make a prediction. The reason for the use of Logistic Regression is because we have many independent variables in our data-set to form a prediction from, the goal with this method would be to find the best relationships characters of interest to base a prediction from. 
 
 \begin{lstlisting}
 Model score:
@@ -411,7 +411,7 @@ While this looks to be an optimistic result, we do not know what features our pr
 \newpage
 
 \section{Equation}
-The final equation that we are able to obtain from are model is as follows:
+The final equation that we are able to obtain from our predictive model is as follows:
 
 
 \begin{equation*}
@@ -426,10 +426,10 @@ Where the variables in the equation are obtained form the previous coefficients 
 From this we can see that \texttt{ni} or \texttt{number\_inpatient} has the most effect on our prediction, i.e. a change in units will mostly be impacted by this variable. This is an important observation to make in order to understand what affects the prediction the most. We would therefore expect that a higher \texttt{ni} value will heavily affect the prediction. 
 
 \section{Conclusion}
-In this study we have looked at the data-set \texttt{Diabetes 130-US hospitals for years 1999-2008} and we have made analysis, visualisations, clustering and predictions. In essence we have been able to achieve a score of \texttt{0.65} for the area under our ROC curve and a cross-validation mean score of 0.61. While this does not look to be great, it is important to note that the score we have been able to obtain heavily relies on the data-set and missing values. There are many missing values in the data-set and in the case that we had more information it may be safe to assert that it would help in making predictions.
+In this study we have looked at the data-set \texttt{Diabetes 130-US hospitals for years 1999-2008} and we have made analyses, visualisations, clustering and predictions. In essence we have been able to achieve a score of \texttt{0.65} for the area under our ROC curve and a cross-validation mean score of 0.61. While this does not look to be great, it is important to note that the score we have been able to obtain heavily relies on the data-set and missing values. There are many missing values in the data-set and in the case that we had more information it may be safe to assert that it would help in making predictions.
 
 \linespace
-It is important to reiterate that this model will most likely not be fit to use for making real world predictions but may be used as a guidance to test different features to find correlations and relationships which may give us more insight into diabetes. 
+It is important to reiterate that this model will most likely not be fit to use for making real world predictions but may be used as a guidance to test different features to find correlations and relationships which may give us more insight into diabetes using a linear modelling approach.
 
   \begin{thebibliography}{1}
 

@@ -143,21 +143,21 @@ def createBar(df, cols, xcol, ycol, xlabel, ylabel):
 
 # Get the groups from the dataframe to create pie charts for checking proportionality
 race = filtered.race.value_counts()
-#createPieChart(race, "Diabetic patients by race")
+createPieChart(race, "Diabetic patients by race")
 
 gender = filtered.gender.value_counts()
 del gender["Unknown/Invalid"]
-#createPieChart(gender, "Diabetic pateints by gender")
+createPieChart(gender, "Diabetic pateints by gender")
 
 age = filtered.age.value_counts()
-#createPieChart(age, "Diabetic patients by age")
+createPieChart(age, "Diabetic patients by age")
 
 
 readmitted = filtered.readmitted.value_counts()
-#createPieChart(readmitted, "Readmitted")
+createPieChart(readmitted, "Readmitted")
 
 admission_type = filtered.admission_type_id.value_counts()
-#createPieChart(admission_type, "Admission Type")
+createPieChart(admission_type, "Admission Type")
 
 
 # See the correlation of admission and readmission
@@ -168,9 +168,9 @@ print(grp1)
 grp2 = filtered[["readmitted", "age"]].groupby(["age", "readmitted"], as_index=False).size()
 print(grp2)
 
-#createBar(filtered.time_in_hospital, ["days in hospital", "number of patients"], 0, 1, "Days spent in hospital", "Number of patients")
+createBar(filtered.time_in_hospital, ["days in hospital", "number of patients"], 0, 1, "Days spent in hospital", "Number of patients")
 
-#createBar(filtered.number_diagnoses, ["number diagnoses", "number of patients"], 0, 1, "Number of Diagnoses", "Number of patients")
+createBar(filtered.number_diagnoses, ["number diagnoses", "number of patients"], 0, 1, "Number of Diagnoses", "Number of patients")
 
 # Pairing the data to create a scatter matrix to see correlations between different numeric columns
 def pairs(plot_cols, df):
@@ -184,8 +184,8 @@ def pairs(plot_cols, df):
 
 
 
-#plot_cols = ["time_in_hospital", "num_lab_procedures", "num_procedures", "num_medications", "number_diagnoses"]
-#pairs(plot_cols, data)
+plot_cols = ["time_in_hospital", "num_lab_procedures", "num_procedures", "num_medications", "number_diagnoses"]
+pairs(plot_cols, data)
 
 '''
 Function to plot clusters
