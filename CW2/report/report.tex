@@ -325,6 +325,48 @@ We can further visualise our clusters using a histogram to see what clusters we 
 \noindent
 From Figure 11, we can see that we have 4 clusters with \textit{good} frequencies, showing that there is some groups that might be worth analysing. In the histogram we are looking for a \textit{uniform} distribution but we will still gain information with the results we have obtained. Furthermore from Figure 12 we can visualise the clusters and see the relationship of the clusters, we can see that the distribution of these clusters is fairly similar to the histograms we produced.
 
+\subsection{J-Score}
+
+The goal of this algorithm is to attain a configuration of cluster centers and cluster data
+points so that the overall
+J-squared error function or J-score is minimized \cite{W7Lectures}
+
+\begin{myeq}
+\displaystyle
+J = \sum_{n=1}^{k} \sum_{j=1}^{C_{i}} dist(X_{j}, c_{i})^2
+\end{myeq}
+
+\noindent
+Where, $dist$ is the distance, $k$ is number of clusters, $C_{i}$ the number of points in the cluster, and $c_{i}$ is the centroid of the $i^{th}$ cluster. 
+
+\linespace
+When we run a J-Score function to measure our clustering on our data-set we obtain the following values:
+
+\begin{lstlisting}
+J-score =  6935.49978087638
+  score =  -6935.499780876384
+\end{lstlisting}
+\noindent
+J-Score or \textit{inertia} is sensitive to many factors such as scale, values, number of clusters etc. So it is rather difficult to measure if this is a good score or not, but we have to rely on luck in most cases or we can keep trying more runs of the K-Means clustering process to see if we notice any improvements.
+
+\subsection{Thresholds} 
+
+In thresholding we aim to find the probability of predicting the clusters and the accuracy of the predictions we are making. Though thresholds don't give us accurate results and using the right method of thresholding is difficult to find, we can simply compare actual and predicted values to see what we can find. By running thresholding on our data-set we can observe the following results:
+
+\begin{lstlisting}
+Threshold0.2:           Threshold0.3:          Threshold0.5:
+predict     1    		   predict    0     1     predict     0     1 
+actual           		   actual                 actual
+1.0      4010    		   1.0      274  3        1.0      2900  1110
+2.0      3184    		   2.0      230  2954     2.0      2307   877
+
+Threshold0.1:           Threshold0.01:          Threshold0.08:
+predict     1           predict     1           predict     1
+actual                  actual                  actual       
+1.0      4010           1.0      4010           1.0      4010
+2.0      3184           2.0      3184           2.0      3184
+\end{lstlisting}
+
 
 \newpage
 \section{Predictive Model}
@@ -434,6 +476,8 @@ It is important to reiterate that this model will most likely not be fit to use 
   \begin{thebibliography}{1}
 
   \bibitem{table2} Beata Strack, Jonathan P. DeShazo, Chris Gennings, et al., “Impact of HbA1c Measurement on Hospital Readmission Rates: Analysis of 70,000 Clinical Database Patient Records,” BioMed Research International, vol. 2014, Article ID 781670, 11 pages, 2014. doi:10.1155/2014/781670 - \url{https://www.hindawi.com/journals/bmri/2014/781670/} - Table found at: \url{https://www.hindawi.com/journals/bmri/2014/781670/tab2/}
+  
+    \bibitem{W7Lectures} Week 7 Lectures regarding clustering - Found at: \url{https://blackboard.le.ac.uk/bbcswebdav/pid-1659889-dt-content-rid-4527024_2/courses/CO3093/W7Lectures%20-%20Clustering%20-%20Notes.pdf}
 
   \end{thebibliography}
 

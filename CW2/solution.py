@@ -278,6 +278,19 @@ plt.scatter(fpr, sensitivity, c='r', marker='o')
 plt.show()
 
 
+'''
+Calclulating thresholds for our clustering
+'''
+def classify_for_threshold(clf, testX, testY, t):
+	prob_df=pd.DataFrame(clf.predict_proba(testX)[:,1])
+	prob_df['predict']=np.where(prob_df[0]>=t,1,0)
+	prob_df['actual']=testY
+	return pd.crosstab(prob_df['actual'], prob_df['predict'])
+for t in[0.2,0.3,0.5,0.1,0.01,0.08]:
+	crosstab=classify_for_threshold(clf, testX, testY, t)
+	print("Threshold{}:\n{}\n".format(t, crosstab))
+
+
 #########
 ## call KMeans algo with 6 clusters
 model = KMeans(n_clusters=6)
